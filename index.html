@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://www.svgrepo.com/show/184712/equation.svg">
+    <title>Simu-Lab</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/114f48210b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navCont px-10">
+            <div class="flex-row flex-js py-10 container-lg">
+                <div class="navLogo">
+                    <a href="./index.html" target="_blank"> <img width="60px" class="logo"
+                            src="./Assets/equation-svgrepo-com.svg" /></a>
+
+                </div>
+                <div class="navLogo">
+                    <a href="https://github.com/Viczdera" target="_blank"> <img width="60px" class="logo"
+                            src="./Assets/github.svg" /></a>
+
+                </div>
+
+            </div>
+        </nav>
+        <section>
+
+            <h1 class="txtBlue simuLab">Simu-Lab</h1>
+        </section>
+    </header>
+
+    <main>
+        <div class="container sectionCont" data-aos="zoom-in-down">
+            <section class="sect1Cont">
+                <h1 class="txtGray ">Calculate your Simultaneous Equation</h1>
+                <div class="eqnCont mx-20">
+                    <form>
+                        <div class="eqn1">
+                            <div class="flex-row fw-600 txtOrange mx-5">
+                                <div class="dash mr-10"></div>Equation 1
+                            </div>
+                            <div class="form-outline flex-row flex-js">
+                                <div class="flex-row">
+                                    <input type="text" required name="one_A" id="one_A" class="form-control mr-10" />
+                                    <label class="form-label" for="form12">x</label>
+                                </div>
+                                <span>+</span>
+                                <div class="flex-row">
+                                    <input type="text" required name="one_B" id="one_B" class="form-control mr-10" />
+                                    <label class="form-label" for="form12">y</label>
+                                </div>
+                                <span>=</span>
+                                <div class="flex-row">
+                                    <input type="text" required name="one_C" id="one_C" class="form-control mr-10" />
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="eqn2">
+                            <div class="flex-row fw-600 txtOrange mx-5">
+                                <div class="dash mr-10"></div>Equation 2
+                            </div>
+                            <div class="form-outline flex-row flex-js">
+                                <div class="flex-row">
+                                    <input required type="text" name="two_A" id="two_A" class="form-control mr-10" />
+                                    <label class="form-label" for="form12">x</label>
+                                </div>
+                                <span>+</span>
+                                <div class="flex-row">
+                                    <input required type="text" name="two_B" id="two_B" class="form-control mr-10" />
+                                    <label class="form-label" for="form12">y</label>
+                                </div>
+                                <span>=</span>
+                                <div class="flex-row">
+                                    <input required type="text" name="two_C" id="two_C" class="form-control mr-10" />
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <button type="button" onclick="startSolution()" class="btn">Calculate <i
+                                class="fa-solid fa-calculator"></i></button>
+                    </form>
+                </div>
+
+
+            </section>
+            <section class="sect2Cont">
+                <div class="resultModal" id="resultModal" onclick="hideModal()">
+
+                </div>
+                <div class="resultCont" id="resultCont">
+                    <div class="center ">
+                        <h1 id="resultX" class="result"></h1>
+                        <p class="txtOrange mx-5">and</p>
+                        <h1 id="resultY" class="result"></h1>
+                    </div>
+
+                </div>
+
+            </section>
+        </div>
+
+    </main>
+
+
+
+    <script src="./index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init()</script>
+
+</body>
+
+</html>
